@@ -210,7 +210,7 @@ void HostBenchmark()
   auto constexpr kVecBytes = 2 * k1Gb;
 
   {
-    std::vector<uint> v(kVecBytes / sizeof(uint));
+    std::vector<size_t> v(kVecBytes / sizeof(size_t));
 
     auto hst = Bench([&] {
       for (size_t i = 0; i < v.size(); i++) {
@@ -408,8 +408,8 @@ int main(int argc, char** argv)
       std::string dots(max_desc_len - da.descr.size(), '.');
       PrintF("%s:%s %d\n", da.descr, dots, value);
     }
-
   }
+
   if (absl::GetFlag(FLAGS_mem_bench)) {
     PrintF("\nMemory benchmarking:\n");
     HostBenchmark();
