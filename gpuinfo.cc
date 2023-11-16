@@ -162,7 +162,7 @@ std::vector<DeviceAttr> GetAttributes()
 }
 
 constexpr size_t kBenchIter = 4;
-constexpr size_t kHostThreads = 3;
+constexpr size_t kHostThreads = 2;
 constexpr size_t k1Gb = 1024 * 1024 * 1024;
 
 struct Timings {
